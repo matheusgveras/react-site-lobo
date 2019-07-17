@@ -1,12 +1,20 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-import App from './App';
+import App from './views/home/';
+import Contato from './views/contato/';
+import Proposta from './views/proposta/';
+
 import * as serviceWorker from './serviceWorker';
+import { BrowserRouter, Switch, Route } from 'react-router-dom';
 
-ReactDOM.render(<App />, document.getElementById('root'));
-
-// If you want your app to work offline and load faster, you can change
-// unregister() to register() below. Note this comes with some pitfalls.
-// Learn more about service workers: https://bit.ly/CRA-PWA
+ReactDOM.render(
+<BrowserRouter>
+        <Switch>
+            <Route path="/" exact={true} component={App} />
+            <Route path="/contato" exact={true} component={Contato} />
+            <Route path="/Proposta" exact={true} component={Proposta} />
+        </Switch>
+</BrowserRouter>,
+document.getElementById('root'));
 serviceWorker.unregister();
