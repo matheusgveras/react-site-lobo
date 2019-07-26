@@ -1,20 +1,14 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import { Provider } from 'react-redux'
+import store from './store';
 import './index.css';
-import App from './views/home/';
-import Contato from './views/contato/';
-import Proposta from './views/proposta/';
-
+import Home from './views/home/home';
 import * as serviceWorker from './serviceWorker';
-import { BrowserRouter, Switch, Route } from 'react-router-dom';
 
 ReactDOM.render(
-<BrowserRouter>
-        <Switch>
-            <Route path="/" exact={true} component={App} />
-            <Route path="/contato" exact={true} component={Contato} />
-            <Route path="/Proposta" exact={true} component={Proposta} />
-        </Switch>
-</BrowserRouter>,
-document.getElementById('root'));
+    <Provider store={store}>
+      <Home/>
+    </Provider>,
+    document.getElementById('root'));
 serviceWorker.unregister();

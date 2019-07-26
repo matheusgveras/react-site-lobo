@@ -19,9 +19,9 @@
 .o-aside { 
   grid-area: aside; 
   background-color: #282c34;
-  -ms-transform: skew(-30deg, 0deg);
-  -webkit-transform: skew(-30deg, 0deg);
-  transform: skew(-30deg, 0deg);
+  -ms-transform: skew(-10deg, 0deg);
+  -webkit-transform: skew(-10deg, 0deg);
+  transform: skew(-10deg, 0deg);
 } 
 
 .o-main { 

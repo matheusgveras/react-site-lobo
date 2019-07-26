@@ -4,16 +4,18 @@ import MediaQuery from 'react-responsive'
 
 function Layout({ children }) {
     return (
-        <div className="App">
+        <div>
             <MediaQuery minDeviceWidth={656} device={{ deviceWidth: 1600 }}>
-                <aside className="o-aside">Aside</aside>
-                <main className="o-main">Main</main>
-                <footer className="o-footer">Footer</footer>
+            {children}
+                {/* <aside className="o-aside">Aside {children}</aside>
+                <main className="o-main">Main {children} </main>
+                <footer className="o-footer">Footer {children}</footer> */}
             </MediaQuery>
             <MediaQuery maxDeviceWidth={655}>
-                <header className="o-header">Header</header>
-                <main className="o-main">Main</main>
-                <footer className="o-footer">Footer</footer>
+            {children}
+                {/* <header className="o-header">Header {children}</header>
+                <main className="o-main">Main {children}</main>
+                <footer className="o-footer">Footer {children}</footer> */}
             </MediaQuery>
         </div>
     );
