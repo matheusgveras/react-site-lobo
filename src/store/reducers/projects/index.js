@@ -3,7 +3,7 @@ const PROJECTS_LIST = {
 }
 
 // reducers
-function projects (state = PROJECTS_LIST, action){
+function projects (state = PROJECTS_LIST, action) {
     switch (action) {
         case 'ADD_IN_PROJECTS':
             return {...state, data: [...state.data, action.title]}

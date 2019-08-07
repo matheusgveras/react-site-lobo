@@ -1,4 +1,4 @@
 import { createStore } from 'redux'
-import categories from './reducers/categories'
-const store = createStore(categories);
+import projects from './reducers/projects'
+const store = createStore(projects);
 export default store;

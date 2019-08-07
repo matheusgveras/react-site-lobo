@@ -1,24 +1,55 @@
 @import url('https://fonts.googleapis.com/css?family=Shrikhand&display=swap');
 
 .App {
+  background-color: #1d1d1d;
   display: grid; 
   grid-template-areas: "header header header"
                        "aside main main"
                        "footer footer footer";
-
   grid-template-columns: auto auto auto; 
   grid-template-rows: auto 100vh auto;
-
 }
 
 .o-header { 
   grid-area: header; 
-  background-color: #282c34
+  background-color: #1d1d1d;
+  padding: 30px;
+  height: 30px;
+  flex: 1;
 } 
+
+.o-header .logo  { 
+  float: left;
+   width: 150px;
+ } 
+
+.o-header .menu  { 
+ float: right;
+ width: 300px;
+} 
+
+.o-header .menu ul {
+  margin: 0;
+  list-style-type: none;
+} 
+
+.o-header .menu ul li { 
+  float: left;
+} 
+
+.o-header .menu ul li a { 
+  padding: 5px;
+  color:#fff;
+  text-decoration: none;
+}
+
+.o-header .menu ul li a:hover { 
+  color:#FCBA04;
+}
 
 .o-aside { 
   grid-area: aside; 
-  background-color: #282c34;
+  background-color: #1d1d1d;
   -ms-transform: skew(-10deg, 0deg);
   -webkit-transform: skew(-10deg, 0deg);
   transform: skew(-10deg, 0deg);
@@ -26,24 +57,41 @@
 
 .o-main { 
   grid-area: main; 
-} 
+}
 
 .o-footer { 
   grid-area: footer; 
-  background-color: #282c34;
+  background-color: #1d1d1d;
 }
 
 @media only screen and (max-width: 600px) {
-
-  .App {
-    display: grid; 
-    grid-template-areas: "header header header"
-                         "mobilemain mobilemain mobilemain"
-                         "footer footer footer";
-  }
-  .o-main { 
-    background-color: blue;
-    grid-area: mobilemain; 
+    .App {
+      display: grid;
+      grid-template-areas: "header header header"
+                          "mobilemain mobilemain mobilemain"
+                          "footer footer footer";
+    }
+    .o-main { 
+      grid-area: mobilemain; 
+    }
+    .o-header .logo  { 
+      float: left;
+       width: 150px;
+     } 
+    
+    .o-header .menu  { 
+     float: right;
+     width: 30px;
+    } 
+    
+  .o-header .menu ul { 
+    list-style-type: none;
+  } 
+  .o-header .menu ul li { 
+    float: none;
+  } 
+  .o-header .menu ul li a { 
+    padding: 5px
   } 
 }
 
@@ -59,7 +107,6 @@
   .PadingTop {
     padding-top: 50px
   }
-
   .ImageApp {
     width: 150px
   }
