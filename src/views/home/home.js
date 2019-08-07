@@ -1,14 +1,15 @@
 import React from 'react';
 import { Layout } from '../../components'
-import { useSelector } from 'react-redux';
 
 export default function Home() {
-  const myProjects = useSelector(state => state.data);
-  console.log('eu sou um log', myProjects);
-  
   return (
     <Layout>
-      {myProjects.map(project => <li key={project}>{project}</li>)}
+      <h1>
+        Fornecemos tecnologias para agencias de marketing e publicidade
+     </h1>
+      <h3>
+        Aplicativos, Sistemas, Sites e E-commerce
+      </h3>
     </Layout>
   );
 }
