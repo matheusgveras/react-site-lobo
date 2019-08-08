@@ -1,56 +1,63 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Link } from "react-router-dom";
-
-import '../../css/App.css';
+import Modal from 'react-responsive-modal';
 import MediaQuery from 'react-responsive';
+
+//structures
+import SocialLinks from './sociallinks';
+import Menu from './menu';
+
+//images
 import logo from '../../resources/logo.png';
 import menuIcon from '../../resources/menu.png';
 
+//css
+import '../../css/App.css';
+
 function Layout({ children }) {
+    const [open, setModal] = useState(false);
     return (
         <div>
             <MediaQuery minDeviceWidth={656} device={{ deviceWidth: 1600 }}>
                 <header className="o-header">
                     <div className="logo">
-                        <img width="140" src={logo} alt="logo" />
+                        <Link to="/"><img width="140" src={logo} alt="logo" /></Link>
                     </div>
                     <div className="menu">
-                        <ul>
-                            <li> <Link to="/projects">Projetos</Link></li>
-                            <li> <Link to="/about">Sobre</Link></li>
-                            <li> <Link to="/contact">Contato</Link></li>
-                        </ul>
+                        <Menu />
                     </div>
                 </header>
-                <main className="o-main" style={{height: window.innerHeight - 150}}>{children}</main>
+                <main className="o-main" style={{ height: window.innerHeight - 150 }}>{children}</main>
                 <footer className="o-footer">
                     <div class="sociallinks">
-                        <ul>
-                            <li><a href="#/">Linkedin</a></li>
-                            <li><a href="#/">Instagram</a></li>
-                            <li><a href="#/">Facebook</a></li>
-                            <li><a href="#/">Github</a></li>
-                            <li><a href="#/">Pinterest</a></li>
-                        </ul>
+                        <SocialLinks />
                     </div>
                     <div class="copyright">
-                        Todos os direitos reservados
+                        Lobo Frontal, por Matheus Veras
                     </div>
                 </footer>
             </MediaQuery>
             <MediaQuery maxDeviceWidth={600}>
                 <header className="o-header">
                     <div className="logo">
-                        <img width="130" src={logo} alt="logo" />
+                        <Link to="/"><img width="130" src={logo} alt="logo" /></Link>
                     </div>
                     <div className="menu">
-                      <img width="30" src={menuIcon} alt="menu" />
+                        <img onClick={() => setModal(open ? false : true)} width="30" src={menuIcon} alt="menu" />
+                        <Modal open={open} onClose={() => setModal(open ? false : true)} center classNames={{
+                            modal: 'customModal',
+                        }}>
+                            <h2>Menu</h2>
+                            <Menu />
+                            <h2>Outros links</h2>
+                            <SocialLinks />
+                        </Modal>
                     </div>
                 </header>
-                <main className="o-main" style={{height: window.innerHeight - 190}}>{children}</main>
+                <main className="o-main" style={{ height: window.innerHeight - 190 }}>{children}</main>
                 <footer className="o-footer">
                     <div class="copyright">
-                       Lobo Frontal, por Matheus Veras
+                        Lobo Frontal, por Matheus Veras
                     </div>
                 </footer>
             </MediaQuery>

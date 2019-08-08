@@ -84,7 +84,7 @@
   float: left;
 } 
 
-.o-footer .sociallinks ul li a { 
+.o-footer .sociallinks ul li a {
   padding: 5px;
   color:#fff;
   font-size: 11px;
@@ -101,9 +101,12 @@
   color:#FCBA04;
 }
 
-
-
 h1 {
+  color: #fff;
+  font-family: 'Montserrat', sans-serif;
+}
+
+h2 {
   color: #fff;
   font-family: 'Montserrat', sans-serif;
 }
@@ -147,6 +150,31 @@ h3 {
   color: #61dafb;
 }
 
+.customModal {
+  background: #1d1d1d!important;
+  height: 80%;
+  width: 98%;
+  border-radius: 10px
+}
+
+.customModal  ul li { 
+  list-style-type: none;
+} 
+
+.customModal ul li a { 
+  padding: 5px;
+  color:#fff;
+  font-size: 11px;
+  text-decoration: none;
+}
+
+.customModal ul li a { 
+  padding: 5px;
+  font-size: 21px;
+  color:#fff;
+  text-decoration: none;
+}
+
 /* **********************************************
 Phone
 ********************************************** */
@@ -162,13 +190,14 @@ Phone
   .App {
     display: grid;
     grid-template-areas: "header header header"
-                        "mobilemain mobilemain mobilemain"
-                        "footer footer footer";
+                         "mobilemain mobilemain mobilemain"
+                         "footer footer footer";
   }
 
   .o-main { 
     grid-area: mobilemain;
-    padding: 20px
+    padding: 20px;
+    text-align: center
   }
 
   .o-header {
@@ -191,6 +220,7 @@ Phone
     padding-left: 10px;
     padding-top: 20px;
     padding-bottom: 20px;
+    font-size: 14px;
     color:#fff;
   } 
 }

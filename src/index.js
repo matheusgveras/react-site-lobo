@@ -1,10 +1,11 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import { BrowserRouter as Router, Route } from "react-router-dom";
-import { Provider } from 'react-redux'
+//import { Provider } from 'react-redux'
 //import store from './store';
 // default styles
 import './index.css';
+
 // views
 import Home from './views/home';
 import About from './views/about';
