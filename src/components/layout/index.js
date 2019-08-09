@@ -2,15 +2,12 @@ import React, { useState } from 'react';
 import { Link } from "react-router-dom";
 import Modal from 'react-responsive-modal';
 import MediaQuery from 'react-responsive';
-
 //structures
 import SocialLinks from './sociallinks';
 import Menu from './menu';
-
 //images
 import logo from '../../resources/logo.png';
 import menuIcon from '../../resources/menu.png';
-
 //css
 import '../../css/App.css';
 
@@ -43,8 +40,8 @@ function Layout({ children }) {
                         <Link to="/"><img width="130" src={logo} alt="logo" /></Link>
                     </div>
                     <div className="menu">
-                        <img onClick={() => setModal(open ? false : true)} width="30" src={menuIcon} alt="menu" />
-                        <Modal open={open} onClose={() => setModal(open ? false : true)} center classNames={{
+                        <img onClick={() => setModal(true)} width="30" src={menuIcon} alt="menu" />
+                        <Modal open={open} onClose={() => setModal(false)} center classNames={{
                             modal: 'customModal',
                         }}>
                             <h2>Menu</h2>
