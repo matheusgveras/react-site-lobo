@@ -11,8 +11,10 @@ import Home from './views/home';
 import About from './views/about';
 import Projects from './views/projects';
 import Contact from './views/contact';
-
 import * as serviceWorker from './serviceWorker';
+import * as firebase from 'firebase';
+
+
 
 ReactDOM.render(
   <Router>

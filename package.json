@@ -7,6 +7,7 @@
     "react": "^16.8.6",
     "react-burger-menu": "^2.6.11",
     "react-dom": "^16.8.6",
+    "react-firebase-hooks": "^2.1.0",
     "react-redux": "^7.1.0",
     "react-responsive": "^7.0.0",
     "react-responsive-modal": "^4.0.1",
@@ -36,6 +37,7 @@
     ]
   },
   "devDependencies": {
+    "firebase": "^6.3.5",
     "jest": "^24.7.1"
   }
 }

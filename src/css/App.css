@@ -1,78 +1,75 @@
 @import url('https://fonts.googleapis.com/css?family=Shrikhand&display=swap');
 @import url('https://fonts.googleapis.com/css?family=Montserrat&display=swap');
-
 .App {
   background-color: #1d1d1d;
-  display: grid; 
-  grid-template-areas: "header header header"
-                       "main main main"
-                       "footer footer footer";
-  grid-template-columns: auto auto auto; 
+  display: grid;
+  grid-template-areas: "header header header" "main main main" "footer footer footer";
+  grid-template-columns: auto auto auto;
   grid-template-rows: auto 100vh auto;
 }
 
-.o-header { 
-  grid-area: header; 
+.o-header {
+  grid-area: header;
   background-color: #1d1d1d;
   padding: 30px;
   height: 30px;
 }
 
-.o-header .logo  { 
+.o-header .logo {
   float: left;
-   width: 150px;
- } 
+  width: 150px;
+}
 
-.o-header .menu  { 
- float: right;
- width: 300px;
-} 
+.o-header .menu {
+  float: right;
+  width: 300px;
+}
 
 .o-header .menu ul {
   margin: 0;
   list-style-type: none;
 }
 
-.o-header .menu ul li { 
+.o-header .menu ul li {
   float: left;
-} 
+}
 
-.o-header .menu ul li a { 
+.o-header .menu ul li a {
   padding: 5px;
-  color:#fff;
+  color: #ffffff;
   text-decoration: none;
 }
 
-.o-header .menu ul li a:hover { 
-  color:#FCBA04;
+.o-header .menu ul li a:hover {
+  color: #FCBA04;
 }
 
-.o-aside { 
-  grid-area: aside; 
-  background-color: #1d1d1d; 
-  -ms-transform: skew(-10deg, 0deg); 
-  -webkit-transform: skew(-10deg, 0deg); 
-  transform: skew(-10deg, 0deg); 
-} 
-
-.o-main { 
-  grid-area: main; 
+.o-aside {
+  grid-area: aside;
+  background-color: #1d1d1d;
+  -ms-transform: skew(-10deg, 0deg);
+  -webkit-transform: skew(-10deg, 0deg);
+  transform: skew(-10deg, 0deg);
 }
 
-.o-footer { 
+.o-main {
+  grid-area: main;
+}
+
+.o-footer {
   height: 30px;
-  grid-area: footer; 
+  grid-area: footer;
   background-color: #1d1d1d;
 }
 
-.o-footer .sociallinks  {
+.o-footer .sociallinks {
   float: left;
-} 
+}
 
-.o-footer .copyright  {
+.o-footer .copyright {
   float: right;
   font-size: 11px;
-  color:#fff;
+  color: #fff;
 }
 
 .o-footer .sociallinks ul {
@@ -80,25 +77,25 @@
   list-style-type: none;
 }
 
-.o-footer .sociallinks ul li { 
+.o-footer .sociallinks ul li {
   float: left;
-} 
+}
 
 .o-footer .sociallinks ul li a {
   padding: 5px;
-  color:#fff;
+  color: #fff;
   font-size: 11px;
   text-decoration: none;
 }
 
-.o-footer .sociallinks ul li a { 
+.o-footer .sociallinks ul li a {
   padding: 5px;
-  color:#fff;
+  color: #fff;
   text-decoration: none;
 }
 
-.o-footer .sociallinks ul li a:hover { 
-  color:#FCBA04;
+.o-footer .sociallinks ul li a:hover {
+  color: #FCBA04;
 }
 
 h1 {
@@ -120,6 +117,7 @@ p {
   color: #fff;
   font-family: 'Montserrat', sans-serif;
 }
+
 .PadingTop {
   padding-top: 100px
 }
@@ -130,7 +128,7 @@ p {
 
 .ByText {
   size: 30px;
-  color:#282c34
+  color: #282c34
 }
 
 .App-logo {
@@ -161,21 +159,21 @@ p {
   border-radius: 10px
 }
 
-.customModal  ul li { 
+.customModal ul li {
   list-style-type: none;
-} 
+}
 
-.customModal ul li a { 
+.customModal ul li a {
   padding: 5px;
-  color:#fff;
+  color: #fff;
   font-size: 11px;
   text-decoration: none;
 }
 
-.customModal ul li a { 
+.customModal ul li a {
   padding: 5px;
   font-size: 21px;
-  color:#fff;
+  color: #fff;
   text-decoration: none;
 }
 
@@ -184,7 +182,7 @@ Forms
 ********************************************** */
 
 label {
-  color:#fff;
+  color: #fff;
   text-align: left;
   width: 100%;
 }
@@ -207,51 +205,43 @@ input[type=text]:focus, input[type=password]:focus {
 /* **********************************************
 Phone
 ********************************************** */
+
 @media only screen and (max-width: 600px) {
   .PadingTop {
     padding-top: 50px
   }
-
   .ImageApp {
     width: 150px
   }
-
   .App {
     display: grid;
-    grid-template-areas: "header header header"
-                         "mobilemain mobilemain mobilemain"
-                         "footer footer footer";
+    grid-template-areas: "header header header" "mobilemain mobilemain mobilemain" "footer footer footer";
   }
-
-  .o-main { 
+  .o-main {
     grid-area: mobilemain;
     padding: 20px;
     text-align: center
   }
-
   .o-header {
     padding: 10
   }
-
-  .o-header .logo  { 
+  .o-header .logo {
     float: left;
-     width: 100px;
-   }
-
-  .o-header .menu  { 
-   float: right;
-   width: 30px;
-   margin-top:-7px
+    width: 100px;
   }
-
-  .o-footer .copyright  {
+  .o-header .menu {
+    float: right;
+    width: 30px;
+    margin-top: -7px
+  }
+  .o-footer .copyright {
     float: left;
     padding-left: 10px;
     padding-top: 20px;
     padding-bottom: 20px;
     font-size: 14px;
-    color:#fff;
-  } 
+    color: #fff;
+  }
 }
 
 @keyframes App-logo-spin {
