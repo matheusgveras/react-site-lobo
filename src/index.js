@@ -1,8 +1,8 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import { BrowserRouter as Router, Route } from "react-router-dom";
-//import { Provider } from 'react-redux'
-//import store from './store';
+// import { Provider } from 'react-redux'
+// import store from './store';
 // default styles
 import './index.css';
 
@@ -14,8 +14,11 @@ import Contact from './views/contact';
 import * as serviceWorker from './serviceWorker';
 import * as firebase from 'firebase';
 
+const firebaseConfig = {
+  
+};
 
-
+firebase.initializeApp(firebaseConfig);
 ReactDOM.render(
   <Router>
     {/* <Provider store={store}> */}

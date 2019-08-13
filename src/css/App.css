@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css?family=Shrikhand&display=swap');
 @import url('https://fonts.googleapis.com/css?family=Montserrat&display=swap');
+
 .App {
   background-color: #1d1d1d;
   display: grid;
@@ -10,7 +11,7 @@
 
 .o-header {
   grid-area: header;
-  background-color: #1d1d1d;
+  background-color: #fff;
   padding: 30px;
   height: 30px;
 }
@@ -46,7 +47,7 @@
 
 .o-aside {
   grid-area: aside;
-  background-color: #1d1d1d;
+  background-color: #fff;
   -ms-transform: skew(-10deg, 0deg);
   -webkit-transform: skew(-10deg, 0deg);
   transform: skew(-10deg, 0deg);

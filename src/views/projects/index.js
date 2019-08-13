@@ -1,37 +1,28 @@
 import React from 'react';
 import { Layout } from '../../components'
-import * as firebase from 'firebase';
 import { useCollection } from 'react-firebase-hooks/firestore';
-
-const firebaseConfig = {
-
-};
-
-firebase.initializeApp(firebaseConfig);
-
+import * as firebase from 'firebase';
+import listOfProjects from './list-of-projects'
 export default function Projects() {
-  const [value, loading, error] = useCollection(
-    firebase.firestore().collection('projects'),
-  );
-  console.log(value);
-  console.log(error)
+  const [value, loading, error] = useCollection(firebase.firestore().collection('projects'));
   return (
     <Layout>
       <h1>
         Projetos
       </h1>
       {error && <strong>Error: {JSON.stringify(error)}</strong>}
-        {loading && <span>Collection: Loading...</span>}
-        {value && (
-          <span>
-            Collection:{' '}
-            {value.docs.map(doc => (
-              <React.Fragment key={doc.id}>
-                {JSON.stringify(doc.data())},{' '}
-              </React.Fragment>
-            ))}
-          </span>
-        )}
+            {loading && <span>Collection: Loading...</span>}
+            {value && (
+                <span>
+                    Collection:{' '}
+                    {value.docs.map(doc => (
+                        <React.Fragment key={doc.id}>
+                         <listOfProjects><p>info of projects structure</p></listOfProjects>
+                        </React.Fragment>
+                    ))}
+                </span>
+            )}
+     
     </Layout>
   );
 }
