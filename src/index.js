@@ -23,6 +23,7 @@ const firebaseConfig = {
   messagingSenderId: process.env.REACT_APP_MSGSENDER_ID,
   appId: process.env.REACT_APP_ID
 };
+console.log('process env: ', process.env.REACT_APP_AUTHDOMAIN);
 
 firebase.initializeApp(firebaseConfig);
 ReactDOM.render(
