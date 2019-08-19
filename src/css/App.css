@@ -11,7 +11,7 @@
 
 .o-header {
   grid-area: header;
-  background-color: #fff;
+  background-color: #1d1d1d;
   padding: 30px;
   height: 30px;
 }

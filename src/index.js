@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import { BrowserRouter as Router, Route } from "react-router-dom";
-// import { Provider } from 'react-redux'
+// import { Provider } from 'react-redux';
 // import store from './store';
 // default styles
 import './index.css';
@@ -23,9 +23,9 @@ const firebaseConfig = {
   messagingSenderId: process.env.REACT_APP_MSGSENDER_ID,
   appId: process.env.REACT_APP_ID
 };
-console.log('process env: ', process.env.REACT_APP_AUTHDOMAIN);
 
 firebase.initializeApp(firebaseConfig);
+
 ReactDOM.render(
   <Router>
     {/* <Provider store={store}> */}
