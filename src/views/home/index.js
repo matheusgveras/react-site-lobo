@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from "react-router-dom";
 import { Layout } from '../../components'
 
 export default function Home() {
@@ -10,6 +11,7 @@ export default function Home() {
       <h3>
         Aplicativos, Sistemas, Sites e E-commerce
       </h3>
+      <Link className="gotoProjects" to="/projects">Ver projetos desenvolvidos</Link>
     </Layout>
   );
 }

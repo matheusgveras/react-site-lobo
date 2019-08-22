@@ -20,7 +20,7 @@
 }
 
 @media (max-width: 600px) {
-  .projectContainer {
+  .project_item {
     width: 100%;
   }
 }

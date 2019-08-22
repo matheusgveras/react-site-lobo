@@ -11,7 +11,6 @@
 
 .o-header {
   grid-area: header;
-  background-color: #1d1d1d;
   padding: 30px;
   height: 30px;
 }
@@ -55,6 +54,13 @@
 
 .o-main {
   grid-area: main;
+  text-align: center;
+  padding-top: 100px;
+}
+
+.o-main .icons {
+  grid-area: main;
+  text-align: center;
 }
 
 .o-footer {
@@ -84,14 +90,9 @@
 
 .o-footer .sociallinks ul li a {
   padding: 5px;
+  padding-right: 15px;
   color: #fff;
   font-size: 11px;
-  text-decoration: none;
-}
-
-.o-footer .sociallinks ul li a {
-  padding: 5px;
-  color: #fff;
   text-decoration: none;
 }
 
@@ -171,6 +172,14 @@ p {
   text-decoration: none;
 }
 
+.gotoProjects {
+  padding: 20px;
+  margin-top: 130px;
+  background-color: #FCBA04;
+  color: #1d1d1d;
+  text-decoration: none;
+}
+
 .customModal ul li a {
   padding: 5px;
   font-size: 21px;
@@ -203,6 +212,7 @@ input[type=text]:focus, input[type=password]:focus {
   background-color: rgb(252, 195, 38);
 }
 
+
 /* **********************************************
 Phone
 ********************************************** */
@@ -221,8 +231,15 @@ Phone
   .o-main {
     grid-area: mobilemain;
     padding: 20px;
+    padding-top: 50px; 
     text-align: center
   }
+
+  .gotoProjects {
+    padding: 20px;
+    margin-top: 50px;
+  }
+  
   .o-header {
     padding: 10
   }

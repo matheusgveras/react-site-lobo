@@ -26,10 +26,10 @@ function Layout({ children }) {
                 </header>
                 <main className="o-main" style={{ height: window.innerHeight - 150 }}>{children}</main>
                 <footer className="o-footer">
-                    <div class="sociallinks">
+                    <div className="sociallinks">
                         <SocialLinks />
                     </div>
-                    <div class="copyright">
+                    <div className="copyright">
                         Lobo Frontal, por Matheus Veras
                     </div>
                 </footer>
@@ -53,7 +53,7 @@ function Layout({ children }) {
                 </header>
                 <main className="o-main" style={{ height: window.innerHeight - 190 }}>{children}</main>
                 <footer className="o-footer">
-                    <div class="copyright">
+                    <div className="copyright">
                         Lobo Frontal, por Matheus Veras
                     </div>
                 </footer>

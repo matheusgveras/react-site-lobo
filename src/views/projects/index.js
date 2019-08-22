@@ -3,10 +3,13 @@ import { Layout } from "../../components";
 import { useCollection } from "react-firebase-hooks/firestore";
 import * as firebase from "firebase";
 import ProjectItem from "./project-item";
+
 export default function Projects() {
+  
   const [value, loading, error] = useCollection(
     firebase.firestore().collection("projects")
   );
+
   return (
     <Layout>
       <h1>Projetos</h1>
