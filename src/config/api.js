@@ -1,7 +1,7 @@
 import axios from 'axios';
 
 const apiservice = axios.create({
-  baseURL: 'https://opentdb.com/',
+  baseURL: 'https://us-central1-matheus-veras.cloudfunctions.net/',
 });
 
 export default apiservice;

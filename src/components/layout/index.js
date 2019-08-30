@@ -24,7 +24,7 @@ function Layout({ children }) {
                         <Menu />
                     </div>
                 </header>
-                <main className="o-main" style={{ height: window.innerHeight - 150 }}>{children}</main>
+                <main className="o-main" style={{ height: window.innerHeight - 280 }}>{children}</main>
                 <footer className="o-footer">
                     <div className="sociallinks">
                         <SocialLinks />

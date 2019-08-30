@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css?family=Shrikhand&display=swap');
+@import url('https://fonts.gotoProjectsogleapis.com/css?family=Shrikhand&display=swap');
 @import url('https://fonts.googleapis.com/css?family=Montserrat&display=swap');
 
 .App {
@@ -31,7 +31,7 @@
 }
 
 .o-header .menu ul li {
-  float: left;
+  float: right;
 }
 
 .o-header .menu ul li a {
@@ -55,7 +55,6 @@
 .o-main {
   grid-area: main;
   text-align: center;
-  padding-top: 100px;
 }
 
 .o-main .icons {
@@ -64,23 +63,26 @@
 }
 
 .o-footer {
+  padding: 30px;
   height: 30px;
   grid-area: footer;
-  background-color: #1d1d1d;
+}
+
+.o-footer .copyright {
+  float: right;
+  font-size: 11px;
+  padding-top: 10px;
+  text-align: center;
+  color: #fff;
 }
 
 .o-footer .sociallinks {
   float: left;
 }
 
-.o-footer .copyright {
-  float: right;
-  font-size: 11px;
-  color: #fff;
-}
-
 .o-footer .sociallinks ul {
-  margin: 0;
+  margin: 0px;
+  padding: 0px;
   list-style-type: none;
 }
 
@@ -127,7 +129,11 @@ p {
 .ImageApp {
   width: 300px
 }
-
+.contactContainer {
+  padding: 30px;
+  display: grid;
+  grid-template-columns: 400px auto;
+}
 .ByText {
   size: 30px;
   color: #282c34
@@ -167,18 +173,26 @@ p {
 
 .customModal ul li a {
   padding: 5px;
+  padding-left: 15px;
   color: #fff;
   font-size: 11px;
   text-decoration: none;
 }
-
+.welComeContainer{
+  margin-top: 100px;
+  padding: 20px;
+  margin-bottom: 50px;
+}
 .gotoProjects {
   padding: 20px;
-  margin-top: 130px;
+  margin-top: 0px;
+  font-family: 'Montserrat', sans-serif;
   background-color: #FCBA04;
   color: #1d1d1d;
   text-decoration: none;
+  font-weight: bold;
 }
+
 
 .customModal ul li a {
   padding: 5px;
@@ -198,10 +212,31 @@ label {
 }
 
 input[type="text"] {
-  width: 100%;
+  width: 80%;
   display: inline-block;
+  margin-bottom: 10px;
+  margin-left: 5%;
+  margin-right: 5%;
   color: black;
   padding: 10px;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  box-sizing: border-box;
+  border: none;
+  border-radius: 2px;
+  background-color: #FCBA04;
+}
+
+input[type="submit"] {
+  width: 80%;
+  display: inline-block;
+  margin-bottom: 10px;
+  margin-left: 5%;
+  margin-right: 5%;
+  color: black;
+  padding: 10px;
+  padding-top: 15px;
+  padding-bottom: 15px;
   box-sizing: border-box;
   border: none;
   border-radius: 2px;
@@ -209,8 +244,24 @@ input[type="text"] {
 }
 
 input[type=text]:focus, input[type=password]:focus {
-  background-color: rgb(252, 195, 38);
+  background-color: rgb(201, 147, 0);
 }
+
+textarea {
+  width:80%;
+  height: 200px;
+  display: inline-block;
+  color: black;
+  margin-bottom: 5px;
+  margin-left: 5%;
+  margin-right: 5%;
+  padding: 10px;
+  box-sizing: border-box;
+  border: none;
+  border-radius: 2px;
+  background-color: #FCBA04;
+}
+
 
 
 /* **********************************************
@@ -243,15 +294,18 @@ Phone
   .o-header {
     padding: 10
   }
+
   .o-header .logo {
     float: left;
     width: 100px;
   }
+
   .o-header .menu {
     float: right;
     width: 30px;
     margin-top: -7px
   }
+
   .o-footer .copyright {
     float: left;
     padding-left: 10px;
@@ -259,6 +313,12 @@ Phone
     padding-bottom: 20px;
     font-size: 14px;
     color: #fff;
+  }
+  
+  .contactContainer {
+    padding: 15px;
+    display: grid;
+    grid-template-columns: auto;
   }
 }
 
