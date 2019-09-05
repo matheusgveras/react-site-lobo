@@ -10,7 +10,7 @@ export default function Projects() {
     firebase.firestore().collection("projects")
   );
 
-  return (
+  return ( 
     <Layout>
       <h1>Projetos</h1>
       {error && <strong>Error: {JSON.stringify(error)}</strong>}

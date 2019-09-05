@@ -4,7 +4,7 @@ import MediaQuery from "react-responsive";
 import apiService from '../../config/api';
 
 export default function Contact() {
-  async function sendMail(event){
+  async function sendMail(event) {
     event.preventDefault();
     const data = new FormData(event.target);
     await apiService.post('submit', data)
@@ -15,7 +15,7 @@ export default function Contact() {
           <h1>Contato</h1>
         </div>
         <div className="contactContainer">
-          <div>
+          <div> 
             <p>Matheus Veras</p>
             <p>matheus.versa@lobofrontal.com.br</p>
             <p>Fale direto no whastapp:</p>
@@ -30,7 +30,6 @@ export default function Contact() {
             </form>
           </div>
         </div>
-    
     </Layout>
   );
 }
